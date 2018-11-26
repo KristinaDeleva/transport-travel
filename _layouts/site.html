@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+</head>
+<body>
+		<div class="site">
+		<input type="checkbox" name="main-nav-toggle" id="main-nav-toggle">
+        <header class="site-header">
+            <div class="wrapper">
+                <div class="site-branding">
+                    <p class="site-title">
+                        <a href="{{site.baseurl}}/">Transport EOOD</a>
+                    </p>
+                </div>
+                <label for="main-nav-toggle" id="toggle">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                    <span>Menu</span>
+                </label>
+                <nav class="navigation main">
+                    <ul>
+                        <li><a href="{{site.baseurl}}/">Home</a></li>
+                        <li><a href="{{site.baseurl}}/about/">About</a></li>
+                        <li><a href="{{site.baseurl}}/gallery/">Gallery</a></li>
+                        <li><a href="{{site.baseurl}}/contacts/">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+			{{ content }}
+		</div>
+</body>
+</html>
