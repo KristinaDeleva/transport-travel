@@ -20,21 +20,21 @@
 	margin: 0;
 }
 
-.site-header .wrapper {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	align-items: center;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
-}
-
 .site {
 	$parent: &;
 	
 	#{&}-header {
 		background: #000;
 		color: #FFF;
+		
+		.wrapper {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: center;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
 	}
 	
 	#{&}-title {
@@ -48,10 +48,71 @@
 			font-size: 2rem;
 		}
 	}
+	
+	#{&}-footer {
+		.wrapper {
+			padding-bottom: 2rem;
+		}
+		
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		
+		li {
+			list-style: none;
+		}
+		
+		.about {
+			flex: 0 0 30%;
+			margin-top: 1rem;
+		}
+		
+		.sitemap {
+			margin-top: 2rem;
+		}
+		
+		.sitemap ul {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		
+		.sitemap li {
+			display: block;
+			list-style: none;
+			flex: 0 0 50%;
+		}
+		
+		.sitemap a {
+			text-decoration: none;
+			list-style: none;
+			color: #333;
+			text-align: center;
+		}
+		
+		.sitemap a:hover {
+			border-bottom: 1px solid black;
+			color: grey;
+		}
+		
+		.contacts {
+			margin-top: 2rem;
+		}
+		
+		.contacts a {
+			text-decoration: none;
+			color: #333;
+		}
+		
+		.contacts li a:hover {
+			color: grey;
+		}
+	}
 }
 
 #slider {
 	overflow: hidden;
+	box-shadow: 0 0 2rem 0.1rem rgba(0, 0, 0, 0.5);
 	
 	figure {
 		position: relative;
@@ -69,5 +130,20 @@
 	img {
 		width: 100%;
 		float:left;
+	}
+}
+
+
+@media screen and (min-width: 800px) {
+    .site-footer .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:799px) {
+	.site-footer {
+		padding: 0;
+		margin:0;
 	}
 }
