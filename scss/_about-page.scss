@@ -1,10 +1,39 @@
-.about-title {
-	padding: 2rem;
-	text-align: center;
+.about-page {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-hr {
-	width: 33%;
-	margin: 0 auto;
-	border-bottom: 1px solid #000;
+header .about-title {
+    display: block;
+    min-width: 20vw;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    padding: 2rem 0;
 }
+
+article {
+  padding: 2rem 0;
+  
+  p:not(:last-child) {
+    font-size: 1rem;
+    padding: 1rem 0;
+    
+  }
+}
+
+article h3 {
+  padding: 1.5rem 0;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 3rem;
+}
+
+ul li {
+  padding-bottom: 1rem;
+}
+
