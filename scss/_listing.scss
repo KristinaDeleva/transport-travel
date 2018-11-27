@@ -1,0 +1,61 @@
+.listing {
+	text-align: center;
+	padding: 0;
+	margin: 2rem 0;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.listing li {
+	display: block;
+	list-style: none outside;
+	flex: 0 0 31%;
+}
+
+.listing a {
+	display: block;
+	background: #fff;
+	border-radius: 0.3em;
+	color: #333;
+	text-decoration: none;
+	padding: 1rem 1.5rem;
+	position: relative;
+	transition: background 0.3s ease-in, color 0.3s ease-in;
+	box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+}
+
+.listing a:before {
+	display: block;
+	content: '';
+	border-radius: 0.3em;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	opacity: 0;
+	transition: opacity 0.3s ease-in;
+	box-shadow: 0 0 5rem 0.9rem rgba(0,0,0,0.4);
+}
+
+.listing a:hover {
+	background: #333;
+	color: #FFF;
+}
+
+.listing a:hover:before {
+	opacity: 1;
+}
+
+.listing a span {
+	display: block;
+}
+
+.listing a .title {
+	font-weight: bold;
+	font-size: 1.2rem;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.listing a .date {
+	display: none;
+}
