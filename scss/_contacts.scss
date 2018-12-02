@@ -1,11 +1,13 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 .contact-forms {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 10px;
+	
+	h2 {
+		text-align:center;
+		font-size: 2rem;
+		padding: 1.5rem;
+	}
 }
 
 .column {
@@ -16,16 +18,11 @@ body {
 }
 
 /* Clear floats after the columns */
+
 .row:after {
     content: "";
     display: table;
     clear: both;
-}
-
-h2 {
-  text-align:center;
-  font-size: 2rem;
-  padding: 1.5rem;
 }
 
 input, textarea {
@@ -44,11 +41,12 @@ input[type=submit] {
     padding: 15px 40px;
     border: none;
     cursor: pointer;
+	
+	#{&}:hover {
+		box-shadow: 0px 0px 63px 2px rgba(0,0,0,0.5);
+	}
 }
 
-input[type=submit]:hover {
-    box-shadow: 0px 0px 63px 2px rgba(0,0,0,0.5);
-}
 
 @media screen and (max-width: 799px) {
     .column, input[type=submit] {
